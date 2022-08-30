@@ -40,11 +40,18 @@
 }
 
 body {
-    font-family: var(--thm-font);
+    font-family:'Baloo 2', cursive;
     color: var(--thm-gray);
     font-size: 16px;
     line-height: 34px;
     font-weight: 400;
+}
+h2, h1,h3,h4,h5,h6,p,a{
+    font-family: 'Baloo 2', cursive;
+}
+
+.comment-form__input-box{
+    font-family: 'Baloo 2', cursive;  
 }
 
 body.locked {
@@ -160,7 +167,7 @@ ul {
 
 .section-title__tagline::before {
     content: '';
-    background-color: var(--thm-primary);
+    background-color: #4C1EBF;
     width: 12px;
     height: 4px;
     margin-right: 10px;
@@ -636,7 +643,7 @@ ul {
     line-height: 30px;
     color: #ffffff;
     font-size: 14px;
-    font-family: var(--thm-font);
+    font-family:'Baloo 2', cursive;
     font-weight: 500;
     height: 46px;
     align-items: center;
