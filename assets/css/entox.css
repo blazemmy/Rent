@@ -46,6 +46,13 @@ body {
     line-height: 34px;
     font-weight: 400;
 }
+h2, h1,h3,h4,h5,h6,p,a{
+    font-family: 'Baloo 2', cursive;
+}
+
+.comment-form__input-box{
+    font-family: 'Baloo 2', cursive;  
+}
 
 body.locked {
     overflow: hidden;
