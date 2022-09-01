@@ -125,7 +125,7 @@
                                 host</a>
                             <!-- <ul class="main-menu__list">
                                 <li class="dropdown current">
-                                    <a id = "host" href="#hostt"> <h5> Become a Host </h5></a>
+                                    <a id = "host" href="#hostDiv"> <h5> Become a Host </h5></a>
                             </ul> -->
                         </div>
                         <!-- <div class="main-menu-wrapper__right">
@@ -370,7 +370,7 @@
                 <div class="row justify-content-end">
                     <div class="col-md-6 heading-section heading-section-white">
                         <h2 class="mb-3">You can Earn more with us by Becomming a Host.</h2>
-                        <a href="#hostt" class="btn btn-primary btn-lg">Become A Host</a>
+                        <a href="#hostDiv" class="btn btn-primary btn-lg">Become A Host</a>
                     </div>
                 </div>
             </div>
@@ -433,7 +433,8 @@
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="flaticon-transportation">
                                     <!-- <img src="assets/images/247.png" alt="" srcset=""> -->
-                                </span></div>
+                                </span>
+                            </div>
                             <div class="text w-100">
                                 <h5 class="heading mb-2">24/7 Customer Service</h5>
                                 <p>Our 24 hours support is top-notch in this business and will be glad to provide you
@@ -519,24 +520,27 @@
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="First name" name="fame" required>
+                                            <input type="text" placeholder="First name" name="fname" id="fname"
+                                                required>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="Last name" name="lname" required>
+                                            <input type="text" placeholder="Last name" name="lname" id="lname" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="Email address" name="email" required>
+                                            <input type="text" placeholder="Email address" name="email" id="email"
+                                                required>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="Phone number" name="phone" required>
+                                            <input type="text" placeholder="Phone number" name="phone" id="phone"
+                                                required>
                                         </div>
                                     </div>
                                     <!-- <div class="col-xl-6">
@@ -546,7 +550,7 @@
                                     </div> -->
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="Location" name="address">
+                                            <input type="text" placeholder="Location" name="address" id="address">
                                         </div>
                                     </div>
                                 </div>
@@ -670,11 +674,12 @@
                                 <h3 class="footer-widget__title">Newsletter</h3>
                                 <p class="footer-widget__newsletter-text">Subsrcibe for latest articles and resources
                                 </p>
-                                <form class="footer-widget__newsletter-form">
+                                <form class="footer-widget__newsletter-form" action="#" id="newsLetter">
                                     <div class="footer-widget__newsletter-input-box">
-                                        <input type="email" placeholder="Email address" name="email">
-                                        <button type="submit" class="footer-widget__newsletter-btn"><i
-                                                class="fas fa-envelope"></i></button>
+                                        <input type="email" placeholder="Email address" name="email" id="newsLetterEmail" required>
+                                        <button type="submit" id="smtBtn" class="footer-widget__newsletter-btn">
+                                            <i class="fas fa-envelope"></i>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -797,23 +802,80 @@
         var path = 'https://us-central1-rentluxy-5365b.cloudfunctions.net/';
         var authorization = 'hdnbdkudvgdhakudshjKHfukutghgaicgdusyfhvcud';
         $('#becomeAHostForm').submit(function (e) {
-            $('#smtBtn').attr('disabled', 'disabled');
-            $('#smtBtn').html('<center>Processing... <div class="spinner-border spinner-border-sm" role="status"></div></center>');
+            e.preventDefault();
+
+            $('#becomeAHostForm :submit').attr('disabled', 'disabled');
+            $('#becomeAHostForm :submit').html('<center>Processing... <div class="spinner-border spinner-border-sm" role="status"></div></center>');
             values = $('#logForm :input').serializeArray();
-            $.ajax({
-                url: path + 'addNewHost',
-                type: 'post',
-                data: values,
-                headers: {
-                    'Authorization': authorization,
-                },
-                dataType: 'json',
-                success: function (data) {
-                    console.log(data);
-                    $('.formSpan').html(data);
-                }
-            });
-            return false;
+            var fname = $('#fname').val();
+            var lname = $('#lname').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var address = $('#address').val();
+
+            try {
+                $.ajax({
+                    url: path + 'addNewHost',
+                    type: 'post',
+                    data: {
+                        fname: fname, lname: lname, email: email, address: address, phone: phone
+                    },
+                    headers: {
+                        'Authorization': authorization,
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#becomeAHostForm :submit').removeAttr('disabled');
+                        $('#becomeAHostForm :submit').html('Submit');
+                        // $('.formSpan').html(data);
+                        alert(data.message);
+                        if (data.status == true) {
+                            $('#becomeAHostForm').trigger('reset');
+                        }
+                    }
+                });
+                return false;
+            } catch (error) {
+                console.log(error);
+                $('#becomeAHostForm :submit').removeAttr('disabled');
+                $('#becomeAHostForm :submit').html('Submit');
+            }
+        });
+        $('#newsLetter').submit(function (e) {
+            e.preventDefault();
+
+            $('#newsLetter :submit').attr('disabled', 'disabled');
+            $('#newsLetter :submit').html('<center><div class="spinner-border spinner-border-sm" role="status"></div></center>');
+            values = $('#logForm :input').serializeArray();
+            var email = $('#newsLetterEmail').val();
+
+            try {
+                $.ajax({
+                    url: path + 'addNewNewsLetter',
+                    type: 'post',
+                    data: {
+                        email: email
+                    },
+                    headers: {
+                        'Authorization': authorization,
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#newsLetter :submit').removeAttr('disabled');
+                        $('#newsLetter :submit').html('<i class="fas fa-envelope"></i>');
+                        // $('.formSpan').html(data);
+                        alert(data.message);
+                        if (data.status == true) {
+                            $('#newsLetter').trigger('reset');
+                        }
+                    }
+                });
+                return false;
+            } catch (error) {
+                console.log(error);
+                $('#newsLetter :submit').removeAttr('disabled');
+                $('#newsLetter :submit').html('<i class="fas fa-envelope"></i>');
+            }
         });
     </script>
 </body>
