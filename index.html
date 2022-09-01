@@ -431,7 +431,9 @@
                     <div class="col-md-3">
                         <div class="services services-2 w-100 text-center">
                             <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="flaticon-transportation"></span></div>
+                                <span class="flaticon-transportation">
+                                    <!-- <img src="assets/images/247.png" alt="" srcset=""> -->
+                                </span></div>
                             <div class="text w-100">
                                 <h5 class="heading mb-2">24/7 Customer Service</h5>
                                 <p>Our 24 hours support is top-notch in this business and will be glad to provide you
@@ -807,6 +809,7 @@
                 },
                 dataType: 'json',
                 success: function (data) {
+                    console.log(data);
                     $('.formSpan').html(data);
                 }
             });
