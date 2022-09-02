@@ -51,7 +51,7 @@ h2, h1,h3,h4,h5,h6,p,a{
 }
 
 #host{
-    color: #4C1EBF;
+    color: #5244ab;
     font-size: medium;
 }
 .comment-form__input-box{
@@ -171,7 +171,7 @@ ul {
 
 .section-title__tagline::before {
     content: '';
-    background-color: #4C1EBF;
+    background-color: #5244ab;
     width: 12px;
     height: 4px;
     margin-right: 10px;
@@ -227,7 +227,7 @@ ul {
     display: inline-block;
     width: 45px;
     height: 45px;
-    background: #4C1EBF;
+    background: #5244ab;
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -284,13 +284,13 @@ ul {
 }
 
 .main-menu-wrapper {
-    color: #4C1EBF;
+    color: #5244ab;
     position: relative;
     display: block;
 }
 
 .main-menu-wrapper h5 {
-    color: #4C1EBF;
+    color: #5244ab;
 }
 .main-menu-wrapper :hover{
     color: #CCA70E;
@@ -401,7 +401,7 @@ ul {
 }
 
 .main-menu .main-menu__list>li.current>a::before {
-    background-color: #4C1EBF;
+    background-color: #5244ab;
 }
 
 .main-menu .main-menu__list>li:hover>a::before {
@@ -449,7 +449,7 @@ ul {
 .stricky-header .main-menu__list li ul li a {
     font-size: 16px;
     line-height: 30px;
-    color: #4C1EBF;
+    color: #5244ab;
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
@@ -1120,7 +1120,7 @@ ul {
 
 .featured-one__left-img-title a:hover {
     text-decoration: none;
-    color: var#4C1EBF;
+    color: var#5244ab;
 }
 
 /* .featured-one__left-car-price {
@@ -1226,7 +1226,7 @@ ul {
 
 .featured-one__img-content-title a:hover {
     text-decoration: none;
-    color: #4C1EBF;
+    color: #5244ab;
 }
 
 /* .featured-one__img-content-car-price {
@@ -1237,7 +1237,7 @@ ul {
 
 .featured-one__img-content-car-price span {
     font-size: 24px;
-    color: #4C1EBF;
+    color: #5244ab;
     font-weight: 700;
 } */
 
@@ -1247,7 +1247,7 @@ ul {
 .download {
     position: relative;
     display: block;
-    background-color: #4C1EBF;
+    background-color: #5244ab;
 }
 
 .download__content {
@@ -1296,7 +1296,7 @@ ul {
 .download__btn-1 a:hover {
     text-decoration: none;
     background-color: #CCA70E;
-    color: #4C1EBF;
+    color: #5244ab;
 }
 
 .download__btn-1 i {
@@ -1476,7 +1476,7 @@ ul {
 
 .footer-widget__newsletter-btn i {
     font-size: 15px;
-    color: #4C1EBF;
+    color: #5244ab;
 }
 
 .footer-widget__newsletter-input-box button:focus {
@@ -1529,7 +1529,7 @@ ul {
 .site-footer__social a:hover {
     text-decoration: none;
     background-color: #CCA70E;
-    color: #4C1EBF;
+    color: #5244ab;
 }
 
 .site-footer-bottom__copy-right {
@@ -1575,7 +1575,7 @@ ul {
 }
 
 .comment-form__btn {
-    background:  #4C1EBF;
+    background:  #5244ab;
     font-size: 18px;
     font-weight: 700;
     padding: 20.5px 60px;
@@ -1636,7 +1636,7 @@ ul {
     -webkit-box-pack: center;
     justify-content: center;
     text-align: center;
-    color: #4C1EBF;
+    color: #5244ab;
     background-color: #e9edf2;
     height: 40px;
     width: 40px;
@@ -1653,7 +1653,7 @@ ul {
 .contact-page__social-list a:hover {
     text-decoration: none;
     color: #CCA70E;
-    background-color: #4C1EBF;
+    background-color: #5244ab;
 }
 
 /*--------------------------------------------------------------
@@ -1679,7 +1679,7 @@ ul {
 .contact-info__icon {
     height: 100px;
     width: 100px;
-    background-color: #4C1EBF;
+    background-color: #5244ab;
     border-radius: 50%;
     color: var(--thm-base);
     font-size: 30px;
@@ -1717,5 +1717,5 @@ ul {
 
 .contact-info__details a:hover {
     text-decoration: none;
-    color: #4C1EBF;
+    color: #5244ab;
 }
