@@ -272,7 +272,22 @@ legend {
   line-height: inherit;
   color: inherit;
   white-space: normal; }
+.policy h1{
+  text-align: center;
+}
 
+.policy {
+justify-content: center;
+}
+.policy p {
+  line-height: 35px;
+  font-size: medium;
+}
+
+.policy li {
+  line-height: 35px;
+  font-size: medium;
+}
 progress {
   vertical-align: baseline; }
 
@@ -437,6 +452,12 @@ kbd {
     font-size: 100%;
     font-weight: 700; }
 
+    .download__text1{
+      color: #ffffff;
+      text-align: center;
+      
+    }
+
 pre {
   display: block;
   font-size: 87.5%;
@@ -483,7 +504,8 @@ pre {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px; }
+  margin-left: -15px; 
+}
 
 .no-gutters {
   margin-right: 0;
@@ -491,7 +513,8 @@ pre {
   .no-gutters > .col,
   .no-gutters > [class*="col-"] {
     padding-right: 0;
-    padding-left: 0; }
+    padding-left: 0; 
+  }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,

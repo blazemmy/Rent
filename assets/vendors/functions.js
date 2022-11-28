@@ -21,7 +21,7 @@ $(document).ready(function () {
 
         try {
             $.ajax({
-                url: path + 'addNewHost',
+                url: path + 'api/user/addNewHost',
                 type: 'post',
                 data: {
                     fname: fname, lname: lname, email: email, address: address, phone: phone
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
         try {
             $.ajax({
-                url: path + 'addNewNewsLetter',
+                url: path + 'api/user/addNewsLetter',
                 type: 'post',
                 data: {
                     email: email
