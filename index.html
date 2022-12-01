@@ -134,12 +134,14 @@
                 font-size: 20px;
             }
         }
-            .site-footer-bottom__copy-right1{
-                color: #ffffff;
-            }
-            .site-footer-bottom__copy-right1:hover{
-                color: #cca82c;
-                text-decoration: none;
+
+        .site-footer-bottom__copy-right1 {
+            color: #ffffff;
+        }
+
+        .site-footer-bottom__copy-right1:hover {
+            color: #cca82c;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -707,9 +709,11 @@
 
                         </div>
 
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div id="support" class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                             <div class="footer-widget__column footer-widget__contact">
-                                <h3 class="footer-widget__title">Contact</h3>
+                                <a href="#support">
+                                    <h3 class="footer-widget__title">Contact Support</h3>
+                                </a>
                                 <ul class="list-unstyled footer-widget__contact-list">
                                     <li>
                                         <div class="icon">
@@ -720,13 +724,14 @@
                                                 Dallas, TX 75243, USA</p>
                                         </div>
                                     </li>
-                                   
+
                                     <li>
                                         <div class="icon">
                                             <span class="icon-email"></span>
                                         </div>
                                         <div class="text">
-                                            <p><a style="color: #fff;" href="mailto:info@rentluxy.com">[email&#160;protected]</a></p>
+                                            <p><a style="color: #fff;"
+                                                    href="mailto:info@rentluxy.com">[email&#160;protected]</a></p>
                                         </div>
                                     </li>
                                     <li>
@@ -743,7 +748,8 @@
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                             <div class="footer-widget__column footer-widget__newsletter">
                                 <h3 class="footer-widget__title">Newsletter</h3>
-                                <p class="footer-widget__newsletter-text" style="color: #fff;">Subsrcibe for latest articles and resources
+                                <p class="footer-widget__newsletter-text" style="color: #fff;">Subsrcibe for latest
+                                    articles and resources
                                 </p>
                                 <form class="footer-widget__newsletter-form" action="#" id="newsLetter">
                                     <div class="footer-widget__newsletter-input-box">
@@ -756,8 +762,19 @@
                                 </form>
                             </div>
                         </div>
+                        <!-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__column footer-widget__newsletter">
+                                <h3 class="footer-widget__title">Policy</h3>
+                                <p class="footer-widget__newsletter-text" style="color: #fff;">Privacy Policy </p>
+                            </div>
+                            <div class="footer-widget__column footer-widget__newsletter">  
+                                <p class="footer-widget__newsletter-text" style="color: #fff;">Terms & Conditions  </p>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
+
+
                 <div class="site-footer-bottom">
                     <div class="row">
                         <div class="col-xl-12">
@@ -773,13 +790,15 @@
                                             class="fab fa-tiktok"></i></a>
                                     <a href="https://www.linkedin.com/company/rentluxy/" target="_blank"
                                         class="clr-ins"><i class="fab fa-linkedin"></i></a>
-                                    </div>
-                                    
-                                    <p class="site-footer-bottom__copy-right">© Copyright 2022 by Rentluxy</p> 
-                                    <a href="policy.html" class="site-footer-bottom__copy-right1"> Privacy Policy</a>
                                 </div>
+
+                                <p class="site-footer-bottom__copy-right">© Copyright 2022 by Rentluxy</p>
+                                <a href="policy.html" class="site-footer-bottom__copy-right1"> Privacy Policy</a>
+                                <strong> <a class="site-footer-bottom__copy-right1"> ||</a> </strong>
+                                <a href="terms.html" class="site-footer-bottom__copy-right1"> Terms & Conditions</a>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </footer>
