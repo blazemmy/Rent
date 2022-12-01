@@ -4,7 +4,7 @@ function toaster(type, message) {
     } else {
         toastr.success(message);
     }
-}
+} 
 
 $(document).ready(function () {
     $('#becomeAHostForm').submit(function (e) {
